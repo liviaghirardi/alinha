@@ -1,0 +1,153 @@
+/* 1. RESET BÁSICO E FONTES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa; 
+    color: #333;
+}
+
+/* 2. CABEÇALHO (Menu superior) */
+.cabecalho {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.itens {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end; 
+}
+
+.itens a {
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.itens a:hover {
+    color: #0f172a; 
+}
+
+.home {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* 4. TEXTO DE BOAS VINDAS */
+.texto {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.texto h1 {
+    font-size: 2.5rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.texto p {
+    color: #64748b;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* 5. GRID EM LOSANGO (A mágica do centro) */
+.dashboard-losango {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 8px; 
+    width: 360px;
+    height: 360px;
+    transform: rotate(45deg);
+    margin: 20px 0 80px 0;
+    position: relative;
+}
+
+.quadrante {
+    background-color: #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px; 
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.quadrante:hover {
+    background-color: #cbd5e1;
+    transform: scale(1.02); 
+}
+
+.conteudo {
+    transform: rotate(-45deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.icone {
+    font-size: 36px;
+}
+
+.texto-quadrante {
+    font-weight: 600;
+    color: #0f172a;
+    font-size: 16px;
+}
+
+/* Botão central sobreposto */
+.centro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 90px;
+    height: 90px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; 
+}
+
+.conteudo-centro {
+    transform: rotate(-45deg);
+    font-size: 36px;
+}
+
+/* 6. CARDS INFERIORES (Tarefas, Foco e Sugestão) */
+.tarefas, .foco-do-mes, .sugestao-do-dia {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2, h3 {
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.tarefas p {
+    color: #64748b;
+    margin-bottom: 8px;
+}
